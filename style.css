@@ -1,0 +1,85 @@
+body{ 
+    background-color:hsl(218, 22%, 67%);
+    font-family: 'Karla', sans-serif;
+    
+}
+/* font colours */
+
+h1{ font-weight: 700; color: hsl(179, 62%, 43%);}
+
+h2{ font-weight: 700; color: #fff;}
+
+.clr-yellow-green{ color: hsl(71, 73%, 54%);}/* its for 1st  h4 colour */
+
+#section-1 p{ color: hsl(218, 22%, 67%);}
+
+p{ color: hsl(204, 43%, 90%);}
+
+p{
+    line-height: 1.6em;
+}
+
+/* section bgc & border radiues */
+#section-1{ background-color: hsl(0, 0%, 98%); border-radius: 1em 1em 0em 0em;}
+#section-2{ background-color:hsl(179, 62%, 43%); border-radius: 0em 0em 0em 1em;}
+#section-3{ background-color: rgb(0, 202, 202); border-radius: 0em 0em 1em 0em;}
+
+/* button bgc */
+.clr-yellow-green-bg{ background-color: hsl(71, 73%, 54%);}
+
+/* paddings & font styles */
+#section-1,
+#section-2,
+#section-3{ padding: 2.5em;}
+
+.btn{ 
+    margin-top: 1.8em;
+    border: transparent;
+    border-radius: .3em;
+    padding: 1em 5em 1em 5em;
+    color: hsl(0, 0%, 100%);
+    font-size: 16px;
+}
+
+.doller{
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #fff;
+}
+b{ color: hsl(179, 64%, 52%); font-weight: 100;}
+
+/* grid styles  */
+.main{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 11em;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: 350px 350px;
+    grid-template-areas: 
+    "one one "
+    "two three";
+}
+
+@media ( max-width:650px ) {
+
+    .main{
+        margin-bottom: 11em;
+        grid-template-columns: 1fr;
+        width: fit-content;
+        display: grid;
+        grid-template-areas:
+        "one"
+        "two"
+        "three";
+        
+    }
+    #section-2{border-radius: 0em 0em}
+    #section-3{border-radius: 0em 0em 1em 1em;}
+
+}
+
+
+#section-1{grid-area: one;}
+#section-2{grid-area: two;}
+#section-3{grid-area: three;}
